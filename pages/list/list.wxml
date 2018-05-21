@@ -1,0 +1,15 @@
+<view class="main">
+    <view class="banner">
+        <image src="{{Headerimg.image}}"></image>
+    </view>
+
+    <view class="list-box">
+        <view class="newest-list" wx:for="{{Headerimg.detail}}" wx:key="{{index}}">
+            <navigator url="../details/details">
+                <image src="{{item.thumb}}"></image>
+                <view class="newest-text"><text>{{item.name}}</text></view>
+                <view class="newest-text"><text>￥ {{item.price}}</text></view>
+            </navigator>
+        </view>
+    </view>
+</view>
